@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+.js-plotly-plot .plotly .modebar {
+    display:none;
+}
+
+:root {
+    --font-family: 'Raleway';
+    --font-size-header: 84px;
+    --main-gray: #1f2534;
+    --main-light-gray: #e8ebf1;
+    --main-dark-gray: #12161f;
+    --main-white: #FFF;
+    --main-red: #d00a43;
+    --main-dark-red: #9f0833;
+    --width-max-large: 1080px;
+    --width-max-medium: 840px;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+#vision-wrapper {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 76px 1fr;
+    min-height: 100%;
+}
+
+/* Header */
+#vision-header {
+    background: var(--main-red);
+    color: #FFF;
+    grid-column: 1 / 3;
+    min-height: 60px;
+}
+
+#vision-header>div {
+    display: inline-block;
+    padding: 20px;
+}
+
+#vision-header .vh-title {
+    height: 60px;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#vision-header .vh-title img {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Side bar */
+#vision-side {
+    position: relative;
+    background: var(--main-gray);
+    color: #FFF;
+    grid-column: 1 / 2;
+}
+
+#vision-side .vs-button {
+    text-transform: uppercase;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+#vision-side .vs-button.bottom {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+#vision-side .vs-button.active {
+    background: var(--main-dark-red);
+}
+#vision-side .vs-button:hover {
+    background: var(--main-dark-gray);
+}
+#vision-side .vs-button > img {
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#vision-side .vs-button-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Main */
+#vision-main {
+    background: var(--main-light-gray);
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding:20px;
+}
+#vision-main .main-svg {
+    background: none !important;
+}
+#vision-main h2 {
+    font-weight: normal;
+}
+#vision-main #vision-road {
+    max-width:800px;
+}
