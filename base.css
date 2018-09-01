@@ -33,7 +33,7 @@ body {
 #vision-wrapper {
     display: grid;
     grid-template-columns: 180px 1fr;
-    grid-template-rows: 76px calc(100vh - 76px) 0;
+    grid-template-rows: 76px calc(100vh - 76px);
     min-height: 100%;
 }
 
@@ -69,6 +69,10 @@ body {
     color: #FFF;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+}
+
+#vision-side a {
+    color: inherit;
 }
 
 #vision-side .vs-button {
@@ -111,6 +115,9 @@ body {
 }
 #vision-main #vision-road {
     max-width:800px;
+}
+.js-plotly-plot .plotly .svg-container {
+    width: auto !important;
 }
 
 /* Right side */
@@ -195,4 +202,22 @@ body {
 }
 .button.right {
     float:right;
+}
+
+/* Signs */
+.vs-sign-box {
+    display:grid;
+    grid-template-columns: 300px 1fr;
+}
+.vs-sign-box .signimage img {
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+    display:inline-block;
+}
+.vs-sign-box h3 {
+    grid-column: 2/3;
+}
+.vs-sign-box .vs-box-desc {
+    grid-column: 1/3;
 }
