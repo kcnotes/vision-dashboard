@@ -33,7 +33,7 @@ body {
 #vision-wrapper {
     display: grid;
     grid-template-columns: 180px 1fr;
-    grid-template-rows: 76px 1fr;
+    grid-template-rows: 76px calc(100vh - 76px) 0;
     min-height: 100%;
 }
 
@@ -68,7 +68,7 @@ body {
     background: var(--main-gray);
     color: #FFF;
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
 }
 
 #vision-side .vs-button {
@@ -113,6 +113,21 @@ body {
     max-width:800px;
 }
 
+/* Right side */
+.vision-right {
+    overflow-y: scroll;
+}
+
+.vision-right::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.3);
+    margin-left: 8px;
+    width: 8px;
+}
+
+.vision-right::-webkit-scrollbar-thumb {
+    background: var(--main-dark-gray);
+}
+
 .vs-box {
     padding: 10px 10px 0;
     background: #FFF;
@@ -122,10 +137,11 @@ body {
     -webkit-animation-name: slideUp;
     animation-duration: 1s;
     -webkit-animation-duration: 1s;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
     visibility: visible !important;
     animation-fill-mode: both;
     margin-bottom: 10px;
+    margin-right: 4px;
 }
 .vs-box h3 {
     padding: 10px;
@@ -164,13 +180,12 @@ body {
 .button {
     background: var(--main-dark-gray);
     border: var(--main-dark-gray) 1px solid;
-    border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 700;
     color: #FFF;
     display: inline-table;
-    margin:12px 0 6px;
+    margin:12px 0 10px;
     padding:6px 12px;
     text-decoration:none;
     transition:all 0.3s ease;
