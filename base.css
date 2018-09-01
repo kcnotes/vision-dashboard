@@ -19,6 +19,7 @@
     --main-white: #FFF;
     --main-red: #d00a43;
     --main-dark-red: #9f0833;
+    --main-warning: #dfec24;
     --width-max-large: 1080px;
     --width-max-medium: 840px;
 }
@@ -67,6 +68,7 @@ body {
     background: var(--main-gray);
     color: #FFF;
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 #vision-side .vs-button {
@@ -74,11 +76,6 @@ body {
     padding: 16px;
     cursor: pointer;
     transition: 0.3s ease all;
-}
-#vision-side .vs-button.bottom {
-    position:absolute;
-    bottom: 0;
-    width: 100%;
 }
 #vision-side .vs-button.active {
     background: var(--main-dark-red);
@@ -110,8 +107,77 @@ body {
     background: none !important;
 }
 #vision-main h2 {
-    font-weight: normal;
+    font-weight: 100;
 }
 #vision-main #vision-road {
     max-width:800px;
+}
+
+.vs-box {
+    padding: 10px 10px 0;
+    background: #FFF;
+    display: block;
+    border: 6px solid;
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-delay: 1s;
+    visibility: visible !important;
+    animation-fill-mode: both;
+    margin-bottom: 10px;
+}
+.vs-box h3 {
+    padding: 10px;
+    margin: -10px -10px 0;
+    line-height: 140%;
+}
+.vs-box h3 span:nth-of-type(1) {
+    float: right;
+}
+.vs-box.moderate h3 { background: var(--main-warning); }
+.vs-box.moderate { border-color: var(--main-warning); }
+.vs-box.high h3 { background: var(--main-red); color:#FFF; }
+.vs-box.high { border-color: var(--main-red); }
+
+.vs-box img {
+    width:100%;
+}
+.vs-box .vs-box-desc {
+    margin-top: 10px;
+    line-height: 180%;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* Buttons */
+.button {
+    background: var(--main-dark-gray);
+    border: var(--main-dark-gray) 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    display: inline-table;
+    margin:12px 0 6px;
+    padding:6px 12px;
+    text-decoration:none;
+    transition:all 0.3s ease;
+}
+.button:hover {
+    background: var(--main-gray);
+}
+.button.right {
+    float:right;
 }
