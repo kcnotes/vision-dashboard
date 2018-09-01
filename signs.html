@@ -3,6 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,400,900">
         <link type="text/css" rel="stylesheet" href="base.css">
+        <link href="chardinjs.css" rel="stylesheet">
     </head>
     <body>
         <div id="vision-wrapper">
@@ -11,7 +12,7 @@
             </div>
             <div id="vision-side" style="grid-row:2/4">
                 <div class="vs-button"><img src="home.svg"/><div class="vs-button-text">Home</div></div>
-                <a href="/vision-dashboard/road"><div class="vs-button"><img src="road.svg"/><div `class="vs-button-text">Road</div></div></a>
+                <a href="/vision-dashboard/road"><div class="vs-button" data-intro="Accessible dashboards for all systems on board." data-position="top"><img src="road.svg"/><div class="vs-button-text">Road</div></div></a>
                 <div class="vs-button"><img src="car.svg"/><div class="vs-button-text">Parking</div></div>
                 <a href="/vision-dashboard/signs"><div class="vs-button active"><img src="signs.svg"/><div class="vs-button-text">Signs</div></div></a>
                 <div class="vs-button"><img src="camera.svg"/><div class="vs-button-text">Cameras</div></div>
@@ -20,7 +21,7 @@
             <div id="vision-main" style="grid-row:2/4;grid-template-columns:1fr;">
                 <h2>Sign Audit System</h2><br/>
                 <h3>Latest</h3><br/>
-                <div class="vs-box vs-sign-box">
+                <div class="vs-box vs-sign-box" data-intro="Details of all recently passed signs visible up front. Each sign is geotagged, so no need for barcodes." data-position="top">
                     <div class="signimage">
                         <img src="sign1a.png" />
                         <img src="sign1.png" />
@@ -48,6 +49,20 @@
                         <div style="clear:both"></div>
                     </div>
                 </div>
+                <div class="vs-box vs-sign-box moderate" data-intro="Machine learning algorithms determine if signs are damaged or not to specification." data-position="top">
+                    <div class="signimage">
+                        <img src="sign3a.png" />
+                        <img src="sign3.png" />
+                    </div>
+                    <h3>KEEP LEFT<span>HI-VIS</span><br />
+                    <span style="font-weight:normal">(R2-3A-1) 450X600MM CLASS 1</span><br/>
+                    <span style="font-size: 12px;font-weight: normal">34°51'13.7"S 152°15'29.3"E</span></h3>
+                    <div class="vs-box-desc">
+                        <div class="button right">View details</div>
+                        Condition: Deformation detected<br/>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
                 <div class="vs-box vs-sign-box">
                     <div class="signimage">
                         <img src="sign4a.jpg" />
@@ -62,22 +77,11 @@
                         <div style="clear:both"></div>
                     </div>
                 </div>
-                <div class="vs-box vs-sign-box moderate">
-                    <div class="signimage">
-                        <img src="sign3a.png" />
-                        <img src="sign3.png" />
-                    </div>
-                    <h3>KEEP LEFT<span>HI-VIS</span><br />
-                    <span style="font-weight:normal">(R2-3A-1) 450X600MM CLASS 1</span><br/>
-                    <span style="font-size: 12px;font-weight: normal">34°51'13.7"S 152°15'29.3"E</span></h3>
-                    <div class="vs-box-desc">
-                        <div class="button right">View details</div>
-                        Condition: Deformation detected<br/>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
                 <p style="text-align:center"><a href=" #">Load more...</a></p>
             </div>
         </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="chardinjs.min.js"></script>
+    <script>$('body').chardinJs('start');</script>
 </html>
